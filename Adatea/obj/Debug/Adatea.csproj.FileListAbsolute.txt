@@ -1,0 +1,193 @@
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\Adatea.exe.config
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\Adatea.exe
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\Adatea.pdb
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\obj\Debug\Adatea.csproj.AssemblyReference.cache
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\obj\Debug\MainWindow.g.cs
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\obj\Debug\App.g.cs
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\obj\Debug\Adatea_MarkupCompile.cache
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\obj\Debug\Adatea_MarkupCompile.lref
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\obj\Debug\MainWindow.baml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\obj\Debug\Adatea.g.resources
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\obj\Debug\Adatea.Properties.Resources.resources
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\obj\Debug\Adatea.csproj.GenerateResource.cache
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\obj\Debug\Adatea.csproj.CoreCompileInputs.cache
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\obj\Debug\Adatea.exe
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\obj\Debug\Adatea.pdb
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\Dynamitey.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\ExtendedWPFConverters.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\ExtendedWPFVisualTreeHelper.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\MaterialDesignColors.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\MaterialDesignThemes.Wpf.AddOns.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\System.Drawing.Common.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\ExtendedWPFConverters.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\ExtendedWPFVisualTreeHelper.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\MaterialDesignThemes.Wpf.AddOns.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\obj\Debug\Adatea.csproj.CopyComplete
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\Google.Protobuf.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\MySql.Data.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\System.Buffers.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\System.IO.Pipelines.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\System.Memory.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\ZstdSharp.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\Google.Protobuf.pdb
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\Google.Protobuf.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\MySql.Data.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\System.Buffers.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\System.IO.Pipelines.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\System.Memory.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\obj\Debug\LoginForm.baml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\obj\Debug\LoginForm.g.cs
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\LiveCharts.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\LiveCharts.pdb
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\LiveCharts.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\itextsharp.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\itextsharp.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\libHarfBuzzSharp.dylib
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\x86\libHarfBuzzSharp.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\x64\libHarfBuzzSharp.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\arm64\libHarfBuzzSharp.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\libSkiaSharp.dylib
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\x86\libSkiaSharp.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\x64\libSkiaSharp.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\arm64\libSkiaSharp.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\HarfBuzzSharp.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\LiveChartsCore.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\LiveChartsCore.SkiaSharpView.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\LiveChartsCore.SkiaSharpView.WPF.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\SkiaSharp.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\SkiaSharp.HarfBuzz.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\SkiaSharp.Views.Desktop.Common.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\SkiaSharp.Views.WPF.dll
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\HarfBuzzSharp.pdb
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\HarfBuzzSharp.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\LiveChartsCore.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\LiveChartsCore.SkiaSharpView.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\LiveChartsCore.SkiaSharpView.WPF.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\SkiaSharp.pdb
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\SkiaSharp.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\SkiaSharp.HarfBuzz.pdb
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\SkiaSharp.HarfBuzz.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\SkiaSharp.Views.Desktop.Common.pdb
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\SkiaSharp.Views.Desktop.Common.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\SkiaSharp.Views.WPF.pdb
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\bin\Debug\SkiaSharp.Views.WPF.xml
+C:\Users\Alban\Documents\Adatea\Adatea\Adatea\obj\Debug\Adatea_Content.g.cs
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\Adatea.csproj.AssemblyReference.cache
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\LoginForm.baml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\LoginForm.g.cs
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\MainWindow.g.cs
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\App.g.cs
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\Adatea_Content.g.cs
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\Adatea_MarkupCompile.cache
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\Adatea_MarkupCompile.lref
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\Adatea.exe
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\Adatea.pdb
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\libHarfBuzzSharp.dylib
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\x86\libHarfBuzzSharp.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\x64\libHarfBuzzSharp.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\arm64\libHarfBuzzSharp.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\libSkiaSharp.dylib
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\x86\libSkiaSharp.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\x64\libSkiaSharp.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\arm64\libSkiaSharp.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\Adatea.exe.config
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\Adatea.exe
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\Adatea.pdb
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\Dynamitey.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\ExtendedWPFConverters.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\ExtendedWPFVisualTreeHelper.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\Google.Protobuf.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\HarfBuzzSharp.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\itextsharp.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\LiveCharts.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\MaterialDesignColors.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\MaterialDesignThemes.Wpf.AddOns.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\MySql.Data.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\SkiaSharp.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\SkiaSharp.HarfBuzz.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\SkiaSharp.Views.Desktop.Common.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\SkiaSharp.Views.WPF.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\System.Buffers.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\System.Drawing.Common.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\System.IO.Pipelines.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\System.Memory.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\ZstdSharp.dll
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\ExtendedWPFConverters.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\ExtendedWPFVisualTreeHelper.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\Google.Protobuf.pdb
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\Google.Protobuf.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\HarfBuzzSharp.pdb
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\HarfBuzzSharp.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\itextsharp.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\LiveCharts.pdb
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\LiveCharts.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\MaterialDesignThemes.Wpf.AddOns.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\MySql.Data.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\SkiaSharp.pdb
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\SkiaSharp.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\SkiaSharp.HarfBuzz.pdb
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\SkiaSharp.HarfBuzz.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\SkiaSharp.Views.Desktop.Common.pdb
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\SkiaSharp.Views.Desktop.Common.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\SkiaSharp.Views.WPF.pdb
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\SkiaSharp.Views.WPF.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\System.Buffers.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\System.IO.Pipelines.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\System.Memory.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\MainWindow.baml
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\Adatea.g.resources
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\Adatea.Properties.Resources.resources
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\Adatea.csproj.GenerateResource.cache
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\Adatea.csproj.CoreCompileInputs.cache
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\Adatea.csproj.CopyComplete
+C:\Users\Albatard1\Documents\BTS SLAM ADATEA\Adatea\Adatea\obj\Debug\App.baml

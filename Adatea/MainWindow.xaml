@@ -1,0 +1,524 @@
+﻿<Window x:Class= "Adatea.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            xmlns:local="clr-namespace:Adatea"
+            mc:Ignorable="d"
+            xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+            Title="CRM Info-Tools"  WindowState="Maximized" Height="1150" Width="1200" Background="#f5f5f5">
+
+
+    <!-- Styles Globaux -->
+    <Window.Resources>
+        <Style TargetType="DataGridCell">
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style TargetType="TabItem">
+            <Setter Property="FontSize" Value="14"/>
+            <!-- Vous pouvez également ajouter d'autres propriétés de style si nécessaire -->
+        </Style>
+
+
+
+        <!-- Style pour les boutons -->
+        <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignFlatButton}">
+
+
+
+
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="Padding" Value="12,5"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="#007ACC"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#005C99"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+
+        <!-- Style pour les TextBlock -->
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="5,10,5,2"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+
+        <!-- Style pour les TextBox et ComboBox -->
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+        <Style TargetType="{x:Type ComboBox}">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+
+
+
+
+
+
+    </Window.Resources>
+
+
+    <Grid Margin="10">
+        <TabControl>
+            <!-- Onglet Statistiques avec sous-onglets pour chaque catégorie -->
+            <TabItem Header="Statistiques" Height="25" Margin="-2,-2,-2,0" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="BtnExportPDF" Content="Exporter en PDF" Click="ExporterStatistiquesEnPDF" Margin="414,20,416,0"/>
+                    <TabControl Grid.Row="1" Margin="10">
+                        <!-- Sous-onglet pour les statistiques des Clients -->
+                        <TabItem Header="Clients">
+                            <StackPanel>
+                                <TextBlock Text="Nombre total de clients :" FontWeight="Bold"/>
+                                <TextBlock x:Name="TxtNombreTotalClients"/>
+                                <TextBlock Text="Graphique de la Répartition des Clients par Ville" FontWeight="Bold"/>
+                                <lvc:CartesianChart x:Name="ChartRepartitionClientsParVille" LegendLocation="Right" Height="216"/>
+                                <TextBlock Text="Graphique de la Répartition des Clients par Pays" FontWeight="Bold"/>
+                                <lvc:CartesianChart x:Name="ChartRepartitionClientsParPays" LegendLocation="Right" Height="252"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <!-- Prend la moitié de l'espace disponible -->
+                                        <ColumnDefinition Width="*"/>
+                                        <!-- Prend la moitié de l'espace disponible -->
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Graphique pour les Top 5 Clients -->
+                                    <StackPanel Grid.Column="0">
+                                        <TextBlock Text="Graphique des Top 5 Clients par Total d'Achats" FontWeight="Bold" HorizontalAlignment="Center"/>
+                                        <lvc:CartesianChart x:Name="ChartTopClients" LegendLocation="Right" Height="216" Width="1111"/>
+                                    </StackPanel>
+
+                                    <!-- Graphique pour les 5 Clients avec les chiffres d'achats les plus bas -->
+                                    <StackPanel Grid.Column="1">
+                                        <TextBlock Text="Graphique des 5 Clients par Total d'Achats les Plus Bas" FontWeight="Bold" HorizontalAlignment="Center"/>
+                                        <lvc:CartesianChart x:Name="ChartBottomClients" LegendLocation="Right" Height="216" Width="1111"/>
+                                    </StackPanel>
+                                </Grid>
+
+
+
+                            </StackPanel>
+                        </TabItem>
+                        <!-- Sous-onglet pour les statistiques des Prospects -->
+                        <TabItem Header="Prospects">
+                            <StackPanel>
+                                <TextBlock Text="Nombre total de prospects :" FontWeight="Bold"/>
+                                <TextBlock x:Name="TxtNombreTotalProspects"/>
+                                <StackPanel>
+                                    <TextBlock Text="Répartition des Prospects par Ville" FontWeight="Bold" Margin="5"/>
+                                    <lvc:CartesianChart x:Name="ChartRepartitionProspectsParVille" LegendLocation="Right" Height="222">
+                                        <!-- Les séries seront ajoutées dynamiquement -->
+                                    </lvc:CartesianChart>
+
+                                    <TextBlock Text="Répartition des Prospects par Pays" FontWeight="Bold" Margin="5"/>
+                                    <lvc:CartesianChart x:Name="ChartRepartitionProspectsParPays" LegendLocation="Right" Height="215">
+                                        <!-- Les séries seront ajoutées dynamiquement -->
+                                    </lvc:CartesianChart>
+                                </StackPanel>
+                            </StackPanel>
+                        </TabItem>
+                        <!-- Sous-onglet pour le Chiffre d'affaires -->
+                        <TabItem Header="Chiffre d'Affaires">
+                            <StackPanel>
+                                <TextBlock Text="Répartition du Chiffre d'Affaires 2023" FontWeight="Bold"/>
+                                <lvc:PieChart x:Name="PieChartChiffreAffaires2023" LegendLocation="Right" Height="246"/>
+
+                            </StackPanel>
+                        </TabItem>
+                        <TabItem Header="Autres">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                <StackPanel>
+                                    <!-- Top 5 des produits les plus vendus -->
+                                    <TextBlock Text="Top 5 des produits les plus vendus :" FontWeight="Bold"/>
+                                    <ListBox x:Name="LstTopCinqProduitsVendus"/>
+
+                                    <!-- Moyenne des montants de facturation -->
+                                    <TextBlock Text="Moyenne des montants de facturation :" FontWeight="Bold"/>
+                                    <TextBlock x:Name="TxtMoyenneMontantsFacturation"/>
+
+                                    <!-- Top 3 des clients générant le plus de revenus -->
+                                    <TextBlock Text="Top 3 des clients générant le plus de revenus :" FontWeight="Bold"/>
+                                    <ListBox x:Name="LstClientsRevenus"/>
+
+                                    <!-- Rendez-vous par Commercial 2023 -->
+                                    <TextBlock Text="Rendez-vous par Commercial 2023 :" FontWeight="Bold"/>
+                                    <ListBox x:Name="LstRendezVousParCommercial2023"/>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </TabItem>
+
+
+            <!-- Onglet Clients -->
+            <TabItem Header="Clients" Height="27" Margin="-2,-2,-2,0" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75*"/>
+                        <ColumnDefinition Width="499*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- DataGrid pour les clients -->
+                    <DataGrid x:Name="DtgClients" IsReadOnly="True" SelectionChanged="DtgClients_SelectionChanged" ItemsSource="{Binding}" PreviewMouseLeftButtonUp="DtgClients_PreviewMouseLeftButtonUp" AutoGenerateColumns="False" Grid.Column="0" Margin="10,10,10,10" Grid.ColumnSpan="2">
+                        <DataGrid.Columns>
+                            <!-- Définir les colonnes ici -->
+                            <DataGridTextColumn Header="ID Client" Binding="{Binding ID_Client}" Width="*" />
+                            <DataGridTextColumn Header="Nom" Binding="{Binding Lastname}" Width="*"/>
+                            <DataGridTextColumn Header="Prénom" Binding="{Binding Firstname}" Width="*" />
+                            <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
+                            <DataGridTextColumn Header="Numéro et Rue" Binding="{Binding Street}" Width="*" />
+                            <DataGridTextColumn Header="Code Postal" Binding="{Binding PostalCode}" Width="*"/>
+                            <DataGridTextColumn Header="Ville" Binding="{Binding City}" Width="*"/>
+                            <DataGridTextColumn Header="Pays" Binding="{Binding Country}" Width="*" />
+                            <DataGridTextColumn Header="Numéro de téléphone" Binding="{Binding Phone_Number}" Width="*"/>
+                            <!-- Ajoutez d'autres colonnes selon vos besoins -->
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <!-- StackPanel pour les détails du client -->
+                    <StackPanel Grid.Column="2" Margin="10,10,10,10">
+                        <!-- Les champs de texte pour les détails du client -->
+                        <TextBlock Text="ID Client:" />
+                        <TextBox x:Name="TxtClientID" IsEnabled="False"/>
+                        <TextBlock Text="ID Prospect:"/>
+                        <ComboBox x:Name="CbxClientProspectID" SelectedValuePath="ID_Prospect" SelectionChanged="CbxClientProspectID_SelectionChanged"/>
+                        <TextBlock Text="Nom:"/>
+                        <TextBox x:Name="TxtClientLastname"/>
+                        <TextBlock Text="Prénom:"/>
+                        <TextBox x:Name="TxtClientFirstname"/>
+                        <TextBlock Text="Email:"/>
+                        <TextBox x:Name="TxtClientEmail"/>
+                        <TextBlock Text="Numéro et Rue:"/>
+                        <TextBox x:Name="TxtClientStreet"/>
+                        <TextBlock Text="Code Postal:"/>
+                        <TextBox x:Name="TxtClientPostalCode"/>
+                        <TextBlock Text="Ville:"/>
+                        <TextBox x:Name="TxtClientCity"/>
+                        <TextBlock Text="Pays:"/>
+                        <TextBox x:Name="TxtClientCountry"/>
+                        <TextBlock Text="Numéro de téléphone:"/>
+                        <TextBox x:Name="TxtClientPhoneNumber"/>
+
+                        <!-- Boutons pour gérer les clients -->
+                        <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                            <Button x:Name="BtnAddClient" Content="Ajouter" Width="80" Click="BtnAddClient_Click"/>
+                            <Button x:Name="BtnUpdateClient" Content="Mise à jour" Width="100" Margin="10,0" Click="BtnUpdateClient_Click"/>
+                            <Button x:Name="BtnDeleteClient" Content="Supprimer" Width="100" Click="BtnDeleteClient_Click"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+
+            <!-- Onglet Prospects -->
+            <TabItem Header="Prospects" Height="25" Margin="-2,-2,-2,0" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75*"/>
+                        <ColumnDefinition Width="499*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- DataGrid pour les prospects -->
+                    <DataGrid x:Name="DtgProspects" IsReadOnly="True" PreviewMouseLeftButtonUp="DtgProspects_PreviewMouseLeftButtonUp" SelectionChanged="DtgProspects_SelectionChanged" ItemsSource="{Binding}" AutoGenerateColumns="False" Grid.Column="0" Margin="10,10,10,10" Grid.ColumnSpan="2">
+                        <DataGrid.Columns>
+                            <!-- Définir les colonnes ici -->
+                            <DataGridTextColumn Header="ID Prospect" Binding="{Binding ID_Prospect}" Width="*"/>
+                            <DataGridTextColumn Header="Nom" Binding="{Binding Lastname}" Width="*" />
+                            <DataGridTextColumn Header="Prénom" Binding="{Binding Firstname}" Width="*"/>
+                            <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
+                            <DataGridTextColumn Header="Numéro et Rue" Binding="{Binding Street}" Width="*"/>
+                            <DataGridTextColumn Header="Code Postal" Binding="{Binding PostalCode}" Width="*"/>
+                            <DataGridTextColumn Header="Ville" Binding="{Binding City}" Width="*"/>
+                            <DataGridTextColumn Header="Pays" Binding="{Binding Country}" Width="*"/>
+                            <DataGridTextColumn Header="Numéro de téléphone" Binding="{Binding Phone_Number}" Width="*"/>
+                            <!-- Ajoutez d'autres colonnes selon vos besoins -->
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <!-- StackPanel pour les détails du prospect -->
+                    <StackPanel Grid.Column="2" Margin="10,10,10,10">
+                        <!-- Les champs de texte pour les détails du prospect -->
+                        <TextBlock Text="ID Prospect:" />
+                        <TextBox x:Name="TxtProspectID" IsEnabled="False" />
+                        <TextBlock Text="Nom:" />
+                        <TextBox x:Name="TxtProspectLastname" />
+                        <TextBlock Text="Prénom:" />
+                        <TextBox x:Name="TxtProspectFirstname"/>
+                        <TextBlock Text="Email:" />
+                        <TextBox x:Name="TxtProspectEmail"/>
+                        <TextBlock Text="Numéro et Rue:" />
+                        <TextBox x:Name="TxtProspectStreet" />
+                        <TextBlock Text="Code Postal:" />
+                        <TextBox x:Name="TxtProspectPostalCode"/>
+                        <TextBlock Text="Ville:" />
+                        <TextBox x:Name="TxtProspectCity"/>
+                        <TextBlock Text="Pays:" />
+                        <TextBox x:Name="TxtProspectCountry"/>
+                        <TextBlock Text="Numéro de téléphone:" />
+                        <TextBox x:Name="TxtProspectPhoneNumber"/>
+                        <!-- Boutons pour gérer les prospects -->
+                        <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                            <Button x:Name="BtnAddProspect" Content="Ajouter" Width="80" Click="BtnAddProspect_Click"/>
+                            <Button x:Name="BtnUpdateProspect" Content="Mise à jour" Width="100" Margin="10,0" Click="BtnUpdateProspect_Click"/>
+                            <Button x:Name="BtnDeleteProspect" Content="Supprimer" Width="100" Click="BtnDeleteProspect_Click"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+
+            <!-- Onglet Rendez-vous -->
+            <TabItem Header="Rendez-vous" Height="25" Margin="-2,-2,-2,0" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- DataGrid pour les rendez-vous -->
+                    <DataGrid x:Name="DtgRendezvous" IsReadOnly="True" PreviewMouseLeftButtonUp="DtgRendezvous_PreviewMouseLeftButtonUp" SelectionChanged="DtgRendezvous_SelectionChanged" ItemsSource="{Binding}" AutoGenerateColumns="False" Grid.Column="0" Margin="10">
+                        <DataGrid.Columns>
+                            <!-- Définir les colonnes ici -->
+                            <DataGridTextColumn Header="ID Rendez-vous" Binding="{Binding ID_Rdv}" Width="*" />
+                            <DataGridTextColumn Header="ID Prospect" Binding="{Binding ID_Prospect}" Width="*" />
+                            <DataGridTextColumn Header="ID Client" Binding="{Binding ID_Client}" Width="*" />
+                            <DataGridTextColumn Header="ID Commercial" Binding="{Binding ID_Commercial}" Width="*"/>
+                            <DataGridTextColumn Header="Date" Binding="{Binding Date_Rdv, StringFormat=\{0:dd/MM/yyyy\}}" Width="*"/>
+                            <DataGridTextColumn Header="Heure" Binding="{Binding Time_Rdv, StringFormat=\{0:hh\\:mm\}}" Width="*"/>
+                            <DataGridTextColumn Header="Lieu" Binding="{Binding Location}" Width="*"/>
+                            <!-- Ajoutez d'autres colonnes selon vos besoins -->
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <!-- StackPanel pour les détails du rendez-vous -->
+                    <StackPanel Grid.Column="1" Margin="10">
+                        <!-- Les champs de texte pour les détails du rendez-vous -->
+                        <TextBlock Text="ID Rendez-vous:" />
+                        <TextBox x:Name="TxtRendezvousID" IsEnabled="False" />
+                        <TextBlock Text="ID Prospect:" />
+                        <ComboBox x:Name="CbxRendezvousProspectID" />
+                        <TextBlock Text="ID Client:" />
+                        <ComboBox x:Name="CbxRendezvousClientID" />
+                        <TextBlock Text="ID Commercial:" />
+                        <ComboBox x:Name="CbxRendezvousCommercialID"/>
+                        <TextBlock Text="Date Rendez-vous:" />
+                        <DatePicker x:Name="DtpRendezvousDate"/>
+                        <TextBlock Text="Heure Rendez-vous (hh:mm) :" />
+                        <TextBox x:Name="TxtRendezvousTime"/>
+                        <TextBlock Text="Lieu du rendez-vous:" />
+                        <ComboBox x:Name="CbxRendezvousLocation" IsEditable="True"/>
+                        <!-- Boutons pour gérer les rendez-vous -->
+                        <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                            <Button x:Name="BtnAddRendezvous" Content="Ajouter" Width="80" Click="BtnAddRendezvous_Click"/>
+                            <Button x:Name="BtnUpdateRendezvous" Content="Mise à jour" Width="100" Margin="10,0" Click="BtnUpdateRendezvous_Click"/>
+                            <Button x:Name="BtnDeleteRendezvous" Content="Supprimer" Width="100" Click="BtnDeleteRendezvous_Click"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+
+            <!-- Onglet Produits -->
+            <TabItem Header="Produits" Height="25" Margin="-2,-2,-2,0" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- DataGrid pour les produits -->
+                    <DataGrid x:Name="DtgProduits" IsReadOnly="True" PreviewMouseLeftButtonUp="DtgProduits_PreviewMouseLeftButtonUp" SelectionChanged="DtgProduits_SelectionChanged" ItemsSource="{Binding}" AutoGenerateColumns="False" Grid.Column="0" Margin="10">
+                        <DataGrid.Columns>
+                            <!-- Définir les colonnes ici -->
+                            <DataGridTextColumn Header="ID Produit" Binding="{Binding ID_Product}" Width="*"/>
+                            <DataGridTextColumn Header="Nom du Produit" Binding="{Binding Product_Name}" Width="*"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="*"/>
+                            <DataGridTextColumn Header="Prix" Binding="{Binding Price, StringFormat=\{0:F2\}}" Width="*" />
+                            <DataGridTextColumn Header="Quantité en stock" Binding="{Binding Stock_Quantity}" Width="*"/>
+                            <!-- Ajoutez d'autres colonnes selon vos besoins -->
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <!-- StackPanel pour les détails du produit -->
+                    <StackPanel Grid.Column="1" Margin="10">
+                        <!-- Les champs de texte pour les détails du produit -->
+                        <TextBlock Text="ID Produit:" />
+                        <TextBox x:Name="TxtProduitID" IsEnabled="False" />
+                        <TextBlock Text="Nom du Produit:" />
+                        <TextBox x:Name="TxtProduitName"/>
+                        <TextBlock Text="Description:" />
+                        <TextBox x:Name="TxtProduitDescription"/>
+                        <TextBlock Text="Prix:" />
+                        <TextBox x:Name="TxtProduitPrice" />
+                        <TextBlock Text="Quantité en stock:" />
+                        <TextBox x:Name="TxtProduitStockQuantity"/>
+                        <!-- Boutons pour gérer les produits -->
+                        <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                            <Button x:Name="BtnAddProduit" Content="Ajouter" Width="80" Click="BtnAddProduit_Click"/>
+                            <Button x:Name="BtnUpdateProduit" Content="Mise à jour" Width="100" Margin="10,0" Click="BtnUpdateProduit_Click"/>
+                            <Button x:Name="BtnDeleteProduit" Content="Supprimer" Width="100" Click="BtnDeleteProduit_Click"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+
+            <!-- Onglet Facturation -->
+            <TabItem Header="Facturation" Height="25" Margin="-2,-2,-2,0" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="342"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- DataGrid pour les facturations -->
+                    <DataGrid x:Name="DtgFacturations" IsReadOnly="True" PreviewMouseLeftButtonUp="DtgFacturations_PreviewMouseLeftButtonUp" SelectionChanged="DtgFacturations_SelectionChanged" ItemsSource="{Binding}" AutoGenerateColumns="False" Grid.Column="0" Margin="10,10,10,536">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID Facturation" Binding="{Binding ID_Invoice}" Width="*"/>
+                            <DataGridTextColumn Header="ID Client" Binding="{Binding ID_Client}" Width="*" />
+                            <DataGridTextColumn Header="Date Facturation" Binding="{Binding Date_Invoice, StringFormat=\{0:dd/MM/yyyy\}}" Width="*"/>
+                            <DataGridTextColumn Header="Total TTC" Binding="{Binding Total, StringFormat=\{0:F2\}}" Width="*" />
+                            <DataGridTextColumn Header="Statut de paiement" Binding="{Binding Payment_Status}" Width="*"/>
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <!-- StackPanel pour les détails de la facturation -->
+                    <StackPanel Grid.Column="1" Margin="10,24,10,-123">
+                        <TextBlock Text="ID Facturation:" />
+                        <TextBox x:Name="TxtFacturationID"  IsReadOnly="True" IsEnabled="False" />
+                        <TextBlock Text="ID Client:" />
+                        <ComboBox x:Name="CboFacturationClientID" />
+                        <TextBlock Text="Date Facturation:" />
+                        <DatePicker x:Name="DtpFacturationDate" />
+                        <TextBlock Text="Total:" />
+                        <TextBox x:Name="TxtFacturationTotal" />
+                        <TextBlock Text="Statut de paiement:" />
+                        <ComboBox x:Name="CboFacturationPaymentStatus" >
+                            <ComboBoxItem Content="Payé"/>
+                            <ComboBoxItem Content="En attente de paiement"/>
+                        </ComboBox>
+                        <StackPanel Orientation="Horizontal" Margin="0,20,0,60" HorizontalAlignment="Center">
+                            <Button x:Name="BtnAddFacturation" Content="Ajouter" Width="80" Click="BtnAddFacturation_Click"/>
+                            <Button x:Name="BtnUpdateFacturation" Content="Mise à jour" Width="100" Margin="10,0" Click="BtnUpdateFacturation_Click"/>
+                            <Button x:Name="BtnDeleteFacturation" Content="Supprimer" Width="100" Click="BtnDeleteFacturation_Click"/>
+                        </StackPanel>
+                        <TextBlock Text="ID Ligne Facturation:"/>
+                        <TextBox x:Name="TxtIdLigneFacturation" 
+                                     />
+
+                            <TextBlock Text="ID Facturation:"/>
+                            <TextBox x:Name="TxtIdFacturation" />
+
+                            <TextBlock Text="Sélectionner le Produit (ID):"/>
+                            <ComboBox x:Name="CboProduits" SelectedValuePath="ID_Product" SelectionChanged="CboProduits_SelectionChanged"/>
+
+                            <TextBlock Text="Nom Produit:"/>
+                            <TextBox x:Name="TxtNomProduit" />
+
+                            <TextBlock Text="Description:"/>
+                            <TextBox x:Name="TxtDescription" />
+
+                            <TextBlock Text="Quantité:"/>
+                            <TextBox x:Name="TxtQuantite" />
+
+                            <TextBlock Text="Prix:"/>
+                            <TextBox x:Name="TxtPrix" />
+
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                <Button x:Name="BtnAjouterProduitFacture" Content="Ajouter Produit" Width="133" Click="BtnAjouterProduitFacture_Click" RenderTransformOrigin="0.5,0.5">
+                                    <Button.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="-0.26"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Button.RenderTransform>
+                                </Button>
+                                <Button x:Name="BtnSupprimerProduitFacture" Content="Supprimer Produit" Width="143" Margin="10,0,0,0" Click="BtnSupprimerProduitFacture_Click"/>
+                            </StackPanel>
+                        
+                    </StackPanel>
+
+
+
+                    <!-- DataGrid pour afficher les produits ajoutés à la facturation -->
+                    <DataGrid x:Name="DtgProduitsFacturation"  SelectionChanged="DtgProduitsFacturation_SelectionChanged" AutoGenerateColumns="False" Margin="10,543,10,0" CanUserAddRows="False" Height="812" VerticalAlignment="Top">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID Ligne Facturation" Binding="{Binding ID_Invoice_Line}" Width="*"/>
+                            <DataGridTextColumn Header="ID Facturation" Binding="{Binding ID_Invoice}" Width="*"/>
+                            <DataGridTextColumn Header="ID Produit" Binding="{Binding ID_Product}" Width="*"/>
+                            <DataGridTextColumn Header="Nom Produit" Binding="{Binding Product_Name}" Width="*"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Product_Name}" Width="*"/>
+                            <DataGridTextColumn Header="Quantité" Binding="{Binding Quantity}" Width="*"/>
+                            <DataGridTextColumn Header="Prix" Binding="{Binding Subtotal, StringFormat=\{0:C\}}" Width="*"/>
+                            <DataGridTemplateColumn Width="Auto">
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                </Grid>
+            </TabItem>
+
+
+
+            <!-- Onglet Commerciaux -->
+            <TabItem Header="Commerciaux" Height="25" Margin="-2,-2,-2,0" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="277*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- DataGrid pour les commerciaux -->
+                    <DataGrid x:Name="DtgCommerciaux" IsReadOnly="True" PreviewMouseLeftButtonUp="DtgCommerciaux_PreviewMouseLeftButtonUp" SelectionChanged="DtgCommerciaux_SelectionChanged" ItemsSource="{Binding}" AutoGenerateColumns="False" Grid.Column="0" Margin="10,10,10,10" Grid.ColumnSpan="2">
+                        <DataGrid.Columns>
+                            <!-- Définir les colonnes ici -->
+                            <DataGridTextColumn Header="ID Commercial" Binding="{Binding ID_Commercial}" Width="*" />
+                            <DataGridTextColumn Header="Nom" Binding="{Binding Lastname}" Width="*"/>
+                            <DataGridTextColumn Header="Prénom" Binding="{Binding Firstname}" Width="*" />
+                            <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*" />
+
+                            <!-- Ajoutez d'autres colonnes selon vos besoins -->
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <!-- StackPanel pour les détails des commerciaux -->
+                    <StackPanel Grid.Column="2" Margin="10,10,10,10">
+                        <!-- Les champs de texte pour les détails des commerciaux -->
+                        <TextBlock Text="ID Commercial:" />
+                        <TextBox x:Name="TxtCommercialID" Width="280" IsEnabled="False" />
+                        <TextBlock Text="Nom:" />
+                        <TextBox x:Name="TxtCommercialLastname" Width="280"/>
+                        <TextBlock Text="Prénom:" />
+                        <TextBox x:Name="TxtCommercialFirstname" Width="280"/>
+                        <TextBlock Text="Email:" />
+                        <TextBox x:Name="TxtCommercialEmail" Width="280"/>
+                        <TextBlock Text="Mot de passe:" />
+                        <PasswordBox x:Name="PbxCommercialPassword" Width="280"/>
+                        <!-- Boutons pour gérer les commerciaux -->
+                        <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                            <Button x:Name="BtnAddCommercial" Content="Ajouter" Width="80" Click="BtnAddCommercial_Click"/>
+                            <Button x:Name="BtnUpdateCommercial" Content="Mettre à jour" Width="80" Margin="10,0" Click="BtnUpdateCommercial_Click"/>
+                            <Button x:Name="BtnDeleteCommercial" Content="Supprimer" Width="80" Click="BtnDeleteCommercial_Click"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+
+
+        </TabControl>
+    </Grid>
+</Window>
