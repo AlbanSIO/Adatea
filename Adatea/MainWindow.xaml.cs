@@ -1,29 +1,20 @@
 ﻿
 using Adatea.Classe;
-using MySql.Data.MySqlClient;
+using LiveCharts;
+using LiveCharts.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Documents;
+//using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using LiveCharts;   
-using LiveCharts.Wpf;
-using static System.Net.Mime.MediaTypeNames;
-using System.Security.Cryptography;
-using System.IO;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
- 
+
+
+
 
 namespace Adatea
 {
@@ -1617,9 +1608,9 @@ namespace Adatea
 
             // Configurer les axes, si nécessaire
             ChartRepartitionClientsParVille.AxisX.Clear();
-            ChartRepartitionClientsParVille.AxisX.Add(new Axis { Title = "Villes" });
+            ChartRepartitionClientsParVille.AxisX.Add(new LiveCharts.Wpf.Axis { Title = "Villes" });
             ChartRepartitionClientsParVille.AxisY.Clear();
-            ChartRepartitionClientsParVille.AxisY.Add(new Axis { Title = "Nombre de Clients", LabelFormatter = value => value.ToString("N0") });
+            ChartRepartitionClientsParVille.AxisY.Add(new LiveCharts.Wpf.Axis { Title = "Nombre de Clients", LabelFormatter = value => value.ToString("N0") });
         }
 
         private void ChargerGraphiqueRepartitionClientsParPays()
@@ -1641,9 +1632,9 @@ namespace Adatea
 
             // Configurer les axes, si nécessaire
             ChartRepartitionClientsParPays.AxisX.Clear();
-            ChartRepartitionClientsParPays.AxisX.Add(new Axis { Title = "Pays" });
+            ChartRepartitionClientsParPays.AxisX.Add(new LiveCharts.Wpf.Axis { Title = "Pays" });
             ChartRepartitionClientsParPays.AxisY.Clear();
-            ChartRepartitionClientsParPays.AxisY.Add(new Axis { Title = "Nombre de Clients", LabelFormatter = value => value.ToString("N0") });
+            ChartRepartitionClientsParPays.AxisY.Add(new LiveCharts.Wpf.Axis { Title = "Nombre de Clients", LabelFormatter = value => value.ToString("N0") });
         }
 
         private void ChargerGraphiqueTopClients()
@@ -1665,9 +1656,9 @@ namespace Adatea
 
             // Configurer les axes, si nécessaire
             ChartTopClients.AxisX.Clear();
-            ChartTopClients.AxisX.Add(new Axis { Title = "Clients" });
+            ChartTopClients.AxisX.Add(new LiveCharts.Wpf.Axis { Title = "Clients" });
             ChartTopClients.AxisY.Clear();
-            ChartTopClients.AxisY.Add(new Axis { Title = "Total des Achats", LabelFormatter = value => value.ToString("C") });
+            ChartTopClients.AxisY.Add(new LiveCharts.Wpf.Axis { Title = "Total des Achats", LabelFormatter = value => value.ToString("C") });
         }
 
         private void ChargerGraphiqueBottomClients()
@@ -1689,9 +1680,9 @@ namespace Adatea
 
             // Configurer les axes, si nécessaire
             ChartBottomClients.AxisX.Clear();
-            ChartBottomClients.AxisX.Add(new Axis { Title = "Clients" });
+            ChartBottomClients.AxisX.Add(new LiveCharts.Wpf.Axis { Title = "Clients" });
             ChartBottomClients.AxisY.Clear();
-            ChartBottomClients.AxisY.Add(new Axis { Title = "Total des Achats", LabelFormatter = value => value.ToString("C") });
+            ChartBottomClients.AxisY.Add(new LiveCharts.Wpf.Axis { Title = "Total des Achats", LabelFormatter = value => value.ToString("C") });
         }
 
 
@@ -1775,72 +1766,16 @@ namespace Adatea
 
         private void ExporterStatistiquesEnPDF(object sender, RoutedEventArgs e)
         {
-            // Chemin 
-            string filePath = @"C:\Users\Alban\Downloads\Statistiques.pdf";
-
-            // Création du document PDF
-            Document doc = new Document();
-            try
-            {
-                // Créer un écrivain PDF qui écoute le document
-                PdfWriter.GetInstance(doc, new FileStream(filePath, FileMode.Create));
-
-                // Ouvrir le document pour l'écriture
-                doc.Open();
-
-                // Ajouter des informations de l'onglet statistiques au document PDF
-                doc.Add(new iTextSharp.text.Paragraph("Statistiques CRM"));
-                doc.Add(new iTextSharp.text.Paragraph(" ")); // Ligne vide pour l'espacement
-
-                // Informations générales
-                doc.Add(new iTextSharp.text.Paragraph("Nombre total de clients : " + TxtNombreTotalClients.Text));
-                doc.Add(new iTextSharp.text.Paragraph("Nombre total de prospects : " + TxtNombreTotalProspects.Text));
-                doc.Add(new iTextSharp.text.Paragraph("Moyenne des montants de facturation : " + TxtMoyenneMontantsFacturation.Text));
-                doc.Add(new iTextSharp.text.Paragraph(" "));
-
-
-                // Top 5 des produits les plus vendus
-                doc.Add(new iTextSharp.text.Paragraph("Top 5 des produits les plus vendus :"));
-                foreach (var item in LstTopCinqProduitsVendus.Items)
-                {
-                    doc.Add(new iTextSharp.text.Paragraph("- " + item.ToString()));
-                }
-                doc.Add(new iTextSharp.text.Paragraph(" "));
-
-                // Top 3 des clients générant le plus de revenus
-                doc.Add(new iTextSharp.text.Paragraph("Top 3 des clients générant le plus de revenus :"));
-                foreach (var item in LstClientsRevenus.Items)
-                {
-                    doc.Add(new iTextSharp.text.Paragraph("- " + item.ToString()));
-                }
-                doc.Add(new iTextSharp.text.Paragraph(" "));
-
-                // Rendez-vous par Commercial 2023
-                doc.Add(new iTextSharp.text.Paragraph("Rendez-vous par Commercial 2023 :"));
-                foreach (var item in LstRendezVousParCommercial2023.Items)
-                {
-                    doc.Add(new iTextSharp.text.Paragraph("- " + item.ToString()));
-                }
-                doc.Add(new iTextSharp.text.Paragraph(" "));
-
-                // Fermer le document
-                doc.Close();
-
-                MessageBox.Show("Statistiques exportées en PDF avec succès dans votre dossier téléchargement.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erreur lors de l'exportation en PDF : " + ex.Message);
-            }
+            ExportPDF exportPDF = new ExportPDF();
+            exportPDF.Show();
         }
 
 
 
-                
 
 
         #endregion
 
 
- }
+    }
 }

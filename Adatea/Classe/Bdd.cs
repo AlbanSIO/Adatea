@@ -1,17 +1,13 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 
 namespace Adatea.Classe
 {
     public class BDD
     {
-        private string connectionString = "Server=localhost;Database=Adatea;User ID=root;Password=root;CharSet=utf8;";
+        //private string connectionString = "Server=localhost;Database=Adatea;User ID=root;Password=root;CharSet=utf8;";
+        private string connectionString = "Server=localhost;Database=Adatea;User ID=root;Password=;CharSet=utf8;";
 
         public MySqlConnection GetConnection()
         {
@@ -748,7 +744,7 @@ namespace Adatea.Classe
             using (MySqlConnection conn = GetConnection())
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM Invoice_Line", conn); 
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM Invoice_Line", conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
@@ -1022,7 +1018,7 @@ namespace Adatea.Classe
         {
             using (var connection = GetConnection())
             {
-                 connection.Open();
+                connection.Open();
                 string query = "SELECT COUNT(*) FROM Client WHERE Type = 1";
                 using (var cmd = new MySqlCommand(query, connection))
                 {
@@ -1377,7 +1373,7 @@ namespace Adatea.Classe
             JOIN Invoice ON Client.ID_Client = Invoice.ID_Client
             GROUP BY Client.ID_Client
             ORDER BY TotalRevenue DESC
-            LIMIT 3"; 
+            LIMIT 3";
                 using (var cmd = new MySqlCommand(query, conn))
                 {
                     using (var reader = cmd.ExecuteReader())

@@ -1,7 +1,6 @@
-﻿using Adatea.Classe;
-using System;
-using System.Windows;
+﻿using System;
 using System.DirectoryServices.AccountManagement;
+using System.Windows;
 
 namespace Adatea
 {
@@ -51,6 +50,6 @@ namespace Adatea
             }
         }
 
-       
+
     }
 }

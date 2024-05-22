@@ -80,16 +80,16 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Button x:Name="BtnExportPDF" Content="Exporter en PDF" Click="ExporterStatistiquesEnPDF" Margin="414,20,416,0"/>
-                    <TabControl Grid.Row="1" Margin="10">
+                    <TabControl x:Name="TabControl1" Grid.Row="1" Margin="10">
                         <!-- Sous-onglet pour les statistiques des Clients -->
                         <TabItem Header="Clients">
                             <StackPanel>
                                 <TextBlock Text="Nombre total de clients :" FontWeight="Bold"/>
                                 <TextBlock x:Name="TxtNombreTotalClients"/>
                                 <TextBlock Text="Graphique de la Répartition des Clients par Ville" FontWeight="Bold"/>
-                                <lvc:CartesianChart x:Name="ChartRepartitionClientsParVille" LegendLocation="Right" Height="216"/>
+                                <lvc:CartesianChart x:Name="ChartRepartitionClientsParVille" LegendLocation="Right" Height="216" DisableAnimations="True"/>
                                 <TextBlock Text="Graphique de la Répartition des Clients par Pays" FontWeight="Bold"/>
-                                <lvc:CartesianChart x:Name="ChartRepartitionClientsParPays" LegendLocation="Right" Height="252"/>
+                                <lvc:CartesianChart x:Name="ChartRepartitionClientsParPays" LegendLocation="Right" Height="252" DisableAnimations="True"/>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
@@ -101,13 +101,13 @@
                                     <!-- Graphique pour les Top 5 Clients -->
                                     <StackPanel Grid.Column="0">
                                         <TextBlock Text="Graphique des Top 5 Clients par Total d'Achats" FontWeight="Bold" HorizontalAlignment="Center"/>
-                                        <lvc:CartesianChart x:Name="ChartTopClients" LegendLocation="Right" Height="216" Width="1111"/>
+                                        <lvc:CartesianChart x:Name="ChartTopClients" LegendLocation="Right" Height="216" Width="1111" DisableAnimations="True"/>
                                     </StackPanel>
 
                                     <!-- Graphique pour les 5 Clients avec les chiffres d'achats les plus bas -->
                                     <StackPanel Grid.Column="1">
                                         <TextBlock Text="Graphique des 5 Clients par Total d'Achats les Plus Bas" FontWeight="Bold" HorizontalAlignment="Center"/>
-                                        <lvc:CartesianChart x:Name="ChartBottomClients" LegendLocation="Right" Height="216" Width="1111"/>
+                                        <lvc:CartesianChart x:Name="ChartBottomClients" LegendLocation="Right" Height="216" Width="1111" DisableAnimations="True"/>
                                     </StackPanel>
                                 </Grid>
 
@@ -122,12 +122,12 @@
                                 <TextBlock x:Name="TxtNombreTotalProspects"/>
                                 <StackPanel>
                                     <TextBlock Text="Répartition des Prospects par Ville" FontWeight="Bold" Margin="5"/>
-                                    <lvc:CartesianChart x:Name="ChartRepartitionProspectsParVille" LegendLocation="Right" Height="222">
+                                    <lvc:CartesianChart x:Name="ChartRepartitionProspectsParVille" LegendLocation="Right" Height="222" DisableAnimations="True">
                                         <!-- Les séries seront ajoutées dynamiquement -->
                                     </lvc:CartesianChart>
 
                                     <TextBlock Text="Répartition des Prospects par Pays" FontWeight="Bold" Margin="5"/>
-                                    <lvc:CartesianChart x:Name="ChartRepartitionProspectsParPays" LegendLocation="Right" Height="215">
+                                    <lvc:CartesianChart x:Name="ChartRepartitionProspectsParPays" LegendLocation="Right" Height="215" DisableAnimations="True">
                                         <!-- Les séries seront ajoutées dynamiquement -->
                                     </lvc:CartesianChart>
                                 </StackPanel>
@@ -137,7 +137,7 @@
                         <TabItem Header="Chiffre d'Affaires">
                             <StackPanel>
                                 <TextBlock Text="Répartition du Chiffre d'Affaires 2023" FontWeight="Bold"/>
-                                <lvc:PieChart x:Name="PieChartChiffreAffaires2023" LegendLocation="Right" Height="246"/>
+                                <lvc:PieChart x:Name="PieChartChiffreAffaires2023" LegendLocation="Right" Height="246" DisableAnimations="True"/>
 
                             </StackPanel>
                         </TabItem>

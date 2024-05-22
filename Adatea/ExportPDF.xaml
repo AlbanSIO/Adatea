@@ -1,0 +1,101 @@
+﻿<Window x:Class="Adatea.ExportPDF"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Adatea" xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        mc:Ignorable="d"
+        Title="ExportPDF" Height="800" Width="1200">
+    <Window.Resources>
+        <!-- Style pour les boutons -->
+        <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignFlatButton}">
+
+
+
+
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="Padding" Value="12,5"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="#007ACC"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#005C99"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <StackPanel>
+                <Button x:Name="BtnExportPDF" Content="Enregistrer" Click="ExporterStatistiquesEnPDF" Margin="40,20,40,20"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <!-- Prend la moitié de l'espace disponible -->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Prend la moitié de l'espace disponible -->
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Graphique pour les Top 5 Clients -->
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="Graphique de la Répartition des Clients par Ville" FontWeight="Bold"/>
+                        <lvc:CartesianChart x:Name="ChartRepartitionClientsParVille" LegendLocation="Right" Height="216" DisableAnimations="True"/>
+                    </StackPanel>
+
+                    <!-- Graphique pour les 5 Clients avec les chiffres d'achats les plus bas -->
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Text="Graphique de la Répartition des Clients par Pays" FontWeight="Bold"/>
+                        <lvc:CartesianChart x:Name="ChartRepartitionClientsParPays" LegendLocation="Right" Height="252" DisableAnimations="True"/>
+                    </StackPanel>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <!-- Prend la moitié de l'espace disponible -->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Prend la moitié de l'espace disponible -->
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Graphique pour les Top 5 Clients -->
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="Graphique des Top 5 Clients par Total d'Achats" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <lvc:CartesianChart x:Name="ChartTopClients" LegendLocation="Right" Height="216" DisableAnimations="True"/>
+                    </StackPanel>
+
+                    <!-- Graphique pour les 5 Clients avec les chiffres d'achats les plus bas -->
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Text="Graphique des 5 Clients par Total d'Achats les Plus Bas" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <lvc:CartesianChart x:Name="ChartBottomClients" LegendLocation="Right" Height="216" DisableAnimations="True"/>
+                    </StackPanel>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <!-- Prend la moitié de l'espace disponible -->
+                        <ColumnDefinition Width="*"/>
+                        <!-- Prend la moitié de l'espace disponible -->
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Graphique pour les Top 5 Clients -->
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="Répartition des Prospects par Ville" FontWeight="Bold" Margin="5"/>
+                        <lvc:CartesianChart x:Name="ChartRepartitionProspectsParVille" LegendLocation="Right" Height="222" DisableAnimations="True"/>
+                    </StackPanel>
+
+                    <!-- Graphique pour les 5 Clients avec les chiffres d'achats les plus bas -->
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Text="Répartition des Prospects par Pays" FontWeight="Bold" Margin="5"/>
+                        <lvc:CartesianChart x:Name="ChartRepartitionProspectsParPays" LegendLocation="Right" Height="215" DisableAnimations="True"/>
+                    </StackPanel>
+                </Grid>
+                <Grid>
+                    <TextBlock Text="Répartition du Chiffre d'Affaires 2023" FontWeight="Bold"/>
+                    <lvc:PieChart x:Name="PieChartChiffreAffaires2023" LegendLocation="Right" Height="246" DisableAnimations="True"/>
+                </Grid>
+
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>

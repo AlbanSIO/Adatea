@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Adatea.Classe
+﻿namespace Adatea.Classe
 {
     public class Commercial
     {
@@ -12,7 +6,7 @@ namespace Adatea.Classe
         private string lastname;
         private string firstname;
         private string email;
-        private string password;  
+        private string password;
 
         public int ID_Commercial
         {
